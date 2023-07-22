@@ -1,0 +1,873 @@
+                                    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap');
+                                     :root {
+                                        --red: #ff3838;
+                                    }
+                                    
+                                    * {
+                                        font-family: 'Nunito Sans', sans-serif;
+                                        margin: 0px;
+                                        padding: 0px;
+                                        box-sizing: border-box;
+                                        outline: none;
+                                        border: none;
+                                        text-decoration: none;
+                                        text-transform: capitalize;
+                                        transition: all .2s linear;
+                                    }
+                                    
+                                    *::selection {
+                                        background: var(--red);
+                                        color: #fff;
+                                        background-color: rgba(244, 243, 239, 255);
+                                    }
+                                    
+                                    body {
+                                        background-color: rgba(244, 243, 239, 255);
+                                    }
+                                    
+                                    section {
+                                        padding: 2rem 9%;
+                                    }
+                                    
+                                    html {
+                                        font-size: 62.5%;
+                                        overflow-x: hidden;
+                                        scroll-behavior: smooth;
+                                        scroll-padding-top: 6rem;
+                                    }
+                                    
+                                    header {
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        z-index: 1000;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        position: fixed;
+                                        background: transparent;
+                                        padding: 2rem 9%;
+                                        box-shadow: 0px 10px 20px rgba(0, 0, 0, .1);
+                                    }
+                                    
+                                    .logo {
+                                        color: #666;
+                                        font-size: 40px;
+                                        font-weight: bolder;
+                                    }
+                                    
+                                    .logo i {
+                                        color: var(--red);
+                                        font-size: 40px;
+                                        font-weight: bolder;
+                                    }
+                                    
+                                    header .navbar {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        justify-content: space-between;
+                                        text-align: center;
+                                        position: fixed;
+                                        right: 0;
+                                    }
+                                    
+                                    #menu-bar {
+                                        font-size: 3rem;
+                                        cursor: pointer;
+                                        color: #666;
+                                        border: 1px solid #666;
+                                        border-radius: .3rem;
+                                        padding: .5rem 1.5rem;
+                                        display: none;
+                                    }
+                                    
+                                    header .navbar a {
+                                        text-decoration: none;
+                                        justify-content: space-between;
+                                        padding: 10px 40px;
+                                        font-size: 20px;
+                                        font-weight: 900;
+                                        color: var(--red);
+                                        cursor: pointer;
+                                        transition: 0.3 ease;
+                                        transition: smooth;
+                                        right: 0;
+                                    }
+                                    
+                                    header.navbar a {
+                                        right: 0;
+                                    }
+                                    
+                                    header.navbar {
+                                        position: -webkit-sticky;
+                                        position: sticky;
+                                        float: left;
+                                        list-style: none;
+                                        background-color: transparent;
+                                        transition: smooth;
+                                        right: 0;
+                                    }
+                                    
+                                    .navbar a:hover {
+                                        color: #333;
+                                        border-radius: 20px;
+                                    }
+                                    
+                                    #home {
+                                        background-size: cover;
+                                        margin: 0px;
+                                        background-attachment: fixed;
+                                        background-position: center;
+                                        right: 0;
+                                    }
+                                    
+                                    .home {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        gap: 1.5rem;
+                                        align-items: center;
+                                        min-height: 100vh;
+                                        background-color: rgba(244, 243, 239, 255);
+                                        background-size: cover;
+                                        width: 100%;
+                                        height: 720px;
+                                    }
+                                    
+                                    .home .content {
+                                        flex: 1 1 40rem;
+                                        padding-top: 6.5rem;
+                                    }
+                                    
+                                    .home .content h3 {
+                                        font-size: 5rem;
+                                        color: #333;
+                                    }
+                                    
+                                    .home .content p {
+                                        font-size: 1.8rem;
+                                        color: #666;
+                                        padding: 1rem 0;
+                                        margin-top: 20px;
+                                    }
+                                    
+                                    .btn {
+                                        display: inline-block;
+                                        font-size: 1.7rem;
+                                        border: .2rem solid var(--red);
+                                        padding: .8rem 3rem;
+                                        color: var(--red);
+                                        cursor: pointer;
+                                        position: relative;
+                                        overflow: hidden;
+                                        z-index: 0;
+                                        border-radius: .5rem;
+                                        margin-top: 1rem;
+                                    }
+                                    
+                                    .btn::before {
+                                        content: '';
+                                        position: absolute;
+                                        width: 0%;
+                                        height: 100%;
+                                        top: 0;
+                                        right: 0;
+                                        background: var(--red);
+                                        transition: .3s linear;
+                                        z-index: -1;
+                                    }
+                                    
+                                    .btn:hover::before {
+                                        width: 100%;
+                                        left: 0;
+                                    }
+                                    
+                                    .btn:hover {
+                                        color: white;
+                                    }
+                                    
+                                    .containerbox {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        padding-right: 30px;
+                                        gap: 1.5rem;
+                                    }
+                                    
+                                    .trending {
+                                        background-color: rgba(244, 243, 239, 255);
+                                        margin-bottom: 20px;
+                                    }
+                                    
+                                    .heading {
+                                        align-items: center;
+                                        text-align: center;
+                                        color: #666;
+                                        padding: 1rem;
+                                        font-size: 3.5rem;
+                                        background-color: rgba(244, 243, 239, 255);
+                                    }
+                                    
+                                    .heading span {
+                                        color: var(--red);
+                                    }
+                                    
+                                    .containerbox .box {
+                                        flex: 1 1 30rem;
+                                        position: relative;
+                                        overflow: hidden;
+                                        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+                                        cursor: pointer;
+                                        border-radius: .5rem;
+                                        margin-left: 30px;
+                                        padding: 10px 10px;
+                                        background-color: rgb(211, 214, 228);
+                                    }
+                                    
+                                    .containerbox .box .image {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        position: absolute;
+                                        border-radius: .5rem;
+                                        top: -100%;
+                                        left: 0;
+                                    }
+                                    
+                                    .containerbox .box .content {
+                                        text-align: center;
+                                        background: #fff;
+                                        padding: 2rem;
+                                    }
+                                    
+                                    .containerbox .box .content img {
+                                        margin: 1.5rem 0;
+                                    }
+                                    
+                                    .containerbox .box .content h3 {
+                                        font-size: 2.5 rem;
+                                        color: #333;
+                                    }
+                                    
+                                    .containerbox .box .content p {
+                                        font-size: 1.6rem;
+                                        color: #666;
+                                        padding: 1rem 0;
+                                    }
+                                    
+                                    .containerbox .box:hover .image {
+                                        top: 0;
+                                    }
+                                    
+                                    .containerbox .box .icon {
+                                        width: 60px;
+                                        height: 60px;
+                                    }
+                                    
+                                    .containerbox .box h1 {
+                                        font-size: 3.5rem;
+                                        color: var(--red);
+                                    }
+                                    
+                                    .containerbox .box h2 {
+                                        font-size: 2.5rem;
+                                        color: green;
+                                    }
+                                    
+                                    .containerbox .box .star {
+                                        font-size: 3.5rem;
+                                        color: gold;
+                                    }
+                                    
+                                    .home .image {
+                                        flex: 1 1 40rem;
+                                    }
+                                    
+                                    .home .image img {
+                                        width: 100%;
+                                        padding: 1rem;
+                                        animation: float 3s linear infinite;
+                                    }
+                                    
+                                    .popular .container2 {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        grid-column: 3;
+                                        gap: 2.5rem;
+                                    }
+                                    
+                                    .popular .container2 .box1 {
+                                        padding: 2rem;
+                                        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+                                        border-radius: .5rem;
+                                        text-align: center;
+                                        flex: 1 1 30rem;
+                                        background: #fff;
+                                        position: relative;
+                                        margin-left: 10px;
+                                    }
+                                    
+                                    .popular {
+                                        background-color: rgba(244, 243, 239, 255);
+                                    }
+                                    
+                                    .popular .container2 .box1 img {
+                                        height: 25rem;
+                                        object-fit: cover;
+                                        width: 100%;
+                                        border-radius: .5rem;
+                                    }
+                                    
+                                    .popular .container2 .box1 .price {
+                                        position: absolute;
+                                        top: 3rem;
+                                        left: 3rem;
+                                        background: var(--red);
+                                        color: #fff;
+                                        font-size: 2rem;
+                                        padding: .5rem 1rem;
+                                        border: .5rem;
+                                    }
+                                    
+                                    .popular .container2 .box1 h1 {
+                                        color: #333;
+                                        font-size: 2.5rem;
+                                        padding-top: 1rem;
+                                    }
+                                    
+                                    .popular .container2 .box1 .star i {
+                                        color: gold;
+                                        font-size: 1.7rem;
+                                        padding-top: 1rem .1rem;
+                                    }
+                                    
+                                    .step {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        gap: 5rem;
+                                        padding: 1rem;
+                                    }
+                                    
+                                    .step .box {
+                                        flex: 1 1 25rem;
+                                        padding: 1rem;
+                                        text-align: center;
+                                    }
+                                    
+                                    .step .box img {
+                                        width: 100%;
+                                        height: 30rem;
+                                        border-radius: 50%;
+                                        border: 1rem solid #fff;
+                                        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+                                    }
+                                    
+                                    .step .box h1 {
+                                        font-size: 3rem;
+                                        color: #333;
+                                        padding: 1rem;
+                                    }
+                                    
+                                    .gallery .container2 {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        gap: 1.5rem;
+                                    }
+                                    
+                                    .gallery .container2 .box1 {
+                                        height: 25rem;
+                                        flex: 1 1 30rem;
+                                        border: 1rem solid #fff;
+                                        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+                                        border-radius: .5rem;
+                                        position: relative;
+                                        overflow: hidden;
+                                    }
+                                    
+                                    .gallery .container2 .box1 img {
+                                        height: 100%;
+                                        width: 100%;
+                                        object-fit: cover;
+                                    }
+                                    
+                                    .gallery .container2 .box1 .content {
+                                        position: absolute;
+                                        top: -100%;
+                                        left: 0;
+                                        height: 100%;
+                                        width: 100%;
+                                        background: rgba(255, 255, 255, .8);
+                                        padding-top: 5rem;
+                                        padding: 2rem;
+                                        text-align: center;
+                                    }
+                                    
+                                    .gallery .container2 .box1 .content h1 {
+                                        font-size: 2.5rem;
+                                        color: #333;
+                                    }
+                                    
+                                    .gallery .container2 .box1 .content p {
+                                        font-size: 1.7rem;
+                                        color: #666;
+                                        padding: 1rem 0;
+                                    }
+                                    
+                                    .gallery .container2 .box1:hover .content {
+                                        top: 0;
+                                    }
+                                    
+                                    .review .container2 {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        gap: 1.5rem;
+                                    }
+                                    
+                                    .review .container2 .box {
+                                        text-align: center;
+                                        padding: 3rem;
+                                        border: 1rem solid #fff;
+                                        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+                                        margin-top: 6rem;
+                                        background: #333;
+                                        border-radius: .5rem;
+                                        flex: 1 1 30rem;
+                                    }
+                                    
+                                    .review .container2 .box img {
+                                        width: 12rem;
+                                        height: 12rem;
+                                        border-radius: 50%;
+                                        border: 1rem solid #fff;
+                                        margin-top: -8rem;
+                                        object-fit: cover;
+                                    }
+                                    
+                                    .review .container2 .box h3 {
+                                        font-size: 2.5rem;
+                                        color: var(--red);
+                                        padding: .5rem 0;
+                                    }
+                                    
+                                    .review .container2 .box .stars i {
+                                        font-size: 2rem;
+                                        color: var(--red);
+                                        padding: .5rem 0;
+                                    }
+                                    
+                                    .review .container2 .box p {
+                                        font-size: 1.7rem;
+                                        color: #eee;
+                                        padding: 1rem 0;
+                                    }
+                                    
+                                    .order .row .image img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        border-radius: .5rem;
+                                    }
+                                    
+                                    .order .row {
+                                        padding: 2rem;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        gap: 1.5rem;
+                                        background: #fff;
+                                        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.10);
+                                    }
+                                    
+                                    .order .row .image {
+                                        flex: 1 1 30rem;
+                                    }
+                                    
+                                    .order .row form {
+                                        flex: 1 1 30rem;
+                                    }
+                                    
+                                    .order .row form .inputbox {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        flex-wrap: wrap;
+                                    }
+                                    
+                                    .order .row form .inputbox input,
+                                    .order .row form textarea {
+                                        font-size: 1.7rem;
+                                        margin: 1rem 0;
+                                        padding: 1rem;
+                                        border: .1rem solid rgba(0, 0, 0, 0.3);
+                                        color: #333;
+                                        border-radius: .5rem;
+                                        text-transform: none;
+                                        width: 49%;
+                                    }
+                                    
+                                    .order .row form textarea {
+                                        width: 100%;
+                                        resize: none;
+                                        height: 15rem;
+                                    }
+                                    
+                                    .order .row form .btn {
+                                        background: none;
+                                    }
+                                    
+                                    .order .row form .btn:hover {
+                                        background-color: var(--red);
+                                    }
+                                    
+                                    .footer {
+                                        background: #000;
+                                        text-align: center;
+                                    }
+                                    
+                                    .footer .share {
+                                        display: flex;
+                                        gap: 1.5rem;
+                                        justify-content: center;
+                                        flex-wrap: wrap;
+                                    }
+                                    
+                                    .footer .credit {
+                                        padding: 2.5rem 1rem;
+                                        color: #fff;
+                                        font-weight: normal;
+                                        font-size: 2rem;
+                                    }
+                                    
+                                    .footer .credit span {
+                                        color: var(--red);
+                                    }
+                                    
+                                    #scroll-top {
+                                        position: fixed;
+                                        top: -120%;
+                                        right: 2rem;
+                                        padding: .5rem 1.5rem;
+                                        font-size: 4rem;
+                                        background: var(--red);
+                                        color: #fff;
+                                        border-radius: .5rem;
+                                        transition: .5s linear;
+                                        z-index: 1000;
+                                    }
+                                    
+                                    #scroll-top.active {
+                                        top: calc(100% - 12rem);
+                                    }
+                                    
+                                    @keyframes float {
+                                        0% {
+                                            transform: translateY(0rem);
+                                        }
+                                        100% {
+                                            transform: translateY(0rem);
+                                        }
+                                        50% {
+                                            transform: translateY(10rem);
+                                        }
+                                    }
+                                    
+                                    .home p {
+                                        color: rgb(0, 0, 0);
+                                    }
+                                    
+                                    .home h3 {
+                                        color: rgb(0, 0, 0);
+                                    }
+                                    
+                                    @media(max-width:991px) {
+                                        html {
+                                            font-size: 55%;
+                                        }
+                                        header {
+                                            padding: .2rem;
+                                        }
+                                    }
+                                    
+                                    @media(max-width:768px) {
+                                        #menu-bar {
+                                            display: initial;
+                                        }
+                                        header .navbar {
+                                            position: absolute;
+                                            top: 100%;
+                                            left: 0;
+                                            right: 0;
+                                            background: #f7f7f7;
+                                            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                                            border-top: .1rem solid rgba(0, 0, 0, .1);
+                                        }
+                                        header .navbar.active {
+                                            clip-path: polygon( 0 0, 100% 0, 100% 100%, 0% 100%);
+                                        }
+                                        header .navbar a {
+                                            width: 100%;
+                                            margin: 1.5rem;
+                                            padding: 1.5rem;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            border: .2rem solid rgba(0, 0, 0, .1);
+                                            border-left: .5rem solid var(--red);
+                                            background: #fff;
+                                        }
+                                        header .navbar a .login {
+                                            width: 100%;
+                                            margin: 1.5rem;
+                                            padding: 1.5rem;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            border: .2rem solid rgba(0, 0, 0, .1);
+                                            border-left: .5rem solid var(--red);
+                                            background: #fff;
+                                        }
+                                    }
+                                    
+                                    @media(max-width:400px) {
+                                        html {
+                                            font-size: 50%;
+                                        }
+                                    }
+                                    
+                                    .load {
+                                        position: fixed;
+                                        top: 0;
+                                        left: 0;
+                                        z-index: 10000;
+                                        background: #fff;
+                                        align-items: center;
+                                        display: flex;
+                                        justify-content: center;
+                                        height: 100%;
+                                        width: 100%;
+                                    }
+                                    
+                                    .load.fade {
+                                        top: -120%;
+                                    }
+                                    
+                                    body {
+                                        font-family: Arial, Helvetica, sans-serif;
+                                    }
+                                    /* Full-width input fields */
+                                    
+                                    input[type=text],
+                                    input[type=password] {
+                                        width: 100%;
+                                        padding: 12px 20px;
+                                        margin: 8px 0;
+                                        display: inline-block;
+                                        border: 1px solid #ccc;
+                                        box-sizing: border-box;
+                                    }
+                                    /* Set a style for all buttons */
+                                    
+                                    button {
+                                        background-color: #04AA6D;
+                                        color: white;
+                                        padding: 14px 20px;
+                                        margin: 8px 0;
+                                        border: none;
+                                        cursor: pointer;
+                                        width: 100%;
+                                    }
+                                    
+                                    button:hover {
+                                        opacity: 0.8;
+                                    }
+                                    /* Extra styles for the cancel button */
+                                    
+                                    .cancelbtn {
+                                        width: auto;
+                                        padding: 10px 18px;
+                                        margin-left: 10px;
+                                        background-color: #f44336;
+                                    }
+                                    /* Center the image and position the close button */
+                                    
+                                    .imgcontainer {
+                                        text-align: center;
+                                        margin: 24px 0 12px 0;
+                                        position: relative;
+                                    }
+                                    
+                                    img.avatar {
+                                        width: 20%;
+                                        height: 10%;
+                                    }
+                                    
+                                    .container {
+                                        padding: 16px;
+                                        font-size: 2rem;
+                                    }
+                                    
+                                    span.psw {
+                                        float: right;
+                                        padding-top: 16px;
+                                        margin-right: 10px;
+                                        font-size: 1.5rem;
+                                    }
+                                    /* The Modal (background) */
+                                    
+                                    .modal {
+                                        display: none;
+                                        /* Hidden by default */
+                                        position: fixed;
+                                        /* Stay in place */
+                                        z-index: 1;
+                                        /* Sit on top */
+                                        left: 0;
+                                        top: 0;
+                                        width: 100%;
+                                        /* Full width */
+                                        height: 100%;
+                                        /* Full height */
+                                        overflow: auto;
+                                        /* Enable scroll if needed */
+                                        background-color: rgb(0, 0, 0);
+                                        /* Fallback color */
+                                        background-color: rgba(0, 0, 0, 0.4);
+                                        /* Black w/ opacity */
+                                        padding-top: 0px;
+                                        align-items: center;
+                                    }
+                                    /* Modal Content/Box */
+                                    
+                                    .modal-content {
+                                        background-color: #fefefe;
+                                        margin: 5% auto 10% auto;
+                                        /* 5% from the top, 15% from the bottom and centered */
+                                        border: 1px solid #888;
+                                        border-radius: .5rem;
+                                        width: 30%;
+                                        /* Could be more or less, depending on screen size */
+                                    }
+                                    
+                                    .container1 {
+                                        border-radius: 0 0 .5rem .5rem;
+                                    }
+                                    
+                                    .container button {
+                                        font-size: 2rem;
+                                    }
+                                    /* The Close Button (x) */
+                                    
+                                    .close {
+                                        position: absolute;
+                                        right: 20px;
+                                        top: 0;
+                                        color: #000;
+                                        font-size: 35px;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    .close:hover,
+                                    .close:focus {
+                                        color: red;
+                                        cursor: pointer;
+                                    }
+                                    /* Add Zoom Animation */
+                                    
+                                    .animate {
+                                        -webkit-animation: animatezoom 0.6s;
+                                        animation: animatezoom 0.6s
+                                    }
+                                    
+                                    @-webkit-keyframes animatezoom {
+                                        from {
+                                            -webkit-transform: scale(0)
+                                        }
+                                        to {
+                                            -webkit-transform: scale(1)
+                                        }
+                                    }
+                                    
+                                    @keyframes animatezoom {
+                                        from {
+                                            transform: scale(0)
+                                        }
+                                        to {
+                                            transform: scale(1)
+                                        }
+                                    }
+                                    /* Change styles for span and cancel button on extra small screens */
+                                    
+                                    @media screen and (max-width: 300px) {
+                                        .cancelbtn {
+                                            width: 100%;
+                                        }
+                                        .modal-content {
+                                            width: 80%;
+                                            font-size: 5px;
+                                        }
+                                    }
+                                    
+                                    @media screen and (max-width: 900px) {
+                                        span.psw {
+                                            display: block;
+                                            float: none;
+                                            margin-left: 60px;
+                                            padding: 10px;
+                                        }
+                                        .cancelbtn {
+                                            width: 100%;
+                                        }
+                                        .modal-content {
+                                            width: 80%;
+                                            font-size: 2px;
+                                        }
+                                        .cancelbtn {
+                                            width: 50%;
+                                            align-items: center;
+                                            justify-content: center;
+                                            margin-left: 25%;
+                                        }
+                                        .container1 {
+                                            align-items: center;
+                                            justify-content: center;
+                                        }
+                                    }
+                                    
+                                    @media screen and (max-width: 700px) {
+                                        span.psw {
+                                            display: block;
+                                            float: none;
+                                            margin-left: 60px;
+                                            padding: 10px;
+                                        }
+                                        .cancelbtn {
+                                            width: 100%;
+                                        }
+                                        .modal-content {
+                                            width: 80%;
+                                            font-size: 2px;
+                                        }
+                                        .cancelbtn {
+                                            width: 50%;
+                                            align-items: center;
+                                            justify-content: center;
+                                            margin-left: 25%;
+                                        }
+                                        .container1 {
+                                            align-items: center;
+                                            justify-content: center;
+                                        }
+                                    }
+                                    
+                                    @media screen and (max-width: 400px) {
+                                        span.psw {
+                                            display: block;
+                                            float: none;
+                                        }
+                                        .modal-content {
+                                            width: 80%;
+                                            margin-top: 40px;
+                                        }
+                                        .cancelbtn {
+                                            width: 85%;
+                                            align-items: center;
+                                            font-size: 15px;
+                                            padding: 6px 2px;
+                                            margin-left: 10px;
+                                        }
+                                    }

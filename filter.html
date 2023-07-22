@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="filter.css">
+</head>
+
+<body class="">
+    <div class="container">
+        <form class="filter">
+            <div class="item">
+                <label>Category</label>
+                <select name="category">
+                        <option value="">---</option>
+                        <option value="indian">Indian Dish</option>
+                        <option value="italian">Italian Dish</option>
+                        <option value="chinese">Chinese</option>
+                    </select>
+            </div>
+
+            <div class="item">
+                <label>Min Price</label>
+                <input name="minPrice" type="number">
+            </div>
+            <div class="item">
+                <label>Max Price</label>
+                <input name="maxPrice" type="number">
+            </div>
+            <div class="item submit">
+                <button>Search</button>
+            </div>
+        </form>
+        <div class="countResults">
+            Found <b id="count">5</b> results
+        </div>
+        <div id="list">
+
+        </div>
+    </div>
+
+</body>
+
+<script src="filter.js"></script>
+</body>
+
+</html>
