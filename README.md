@@ -1,6 +1,7 @@
 Overview
 This static restaurant website will present key information about the restaurant and offer a clean, easy-to-navigate experience with no backend integration. It’s perfect for showcasing the restaurant’s ambiance, menu, and unique style.
-Demo:
+Demo: https://epsijenifer.github.io/Restaurant-website/
+
 Features
 1. Home Page: 
    Welcome Banner: High-quality image of the restaurant or popular dishes, with a welcoming tagline.
